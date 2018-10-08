@@ -1,0 +1,49 @@
+-constructeur par default souvent obligatoire ;
+-pas d'appel de fonction statique avec une reference
+two kinds of variale declaration :
+  - defining declaration or definiton -> cause storage for the variable to be allocated
+  -referencing declaration or declaration -> dont cause storage to be allocated bcz it refers to an existing variable
+  A referencing declaration uses the keyword extern and does not provide initialization.
+Otherwise, a declaration is a definition and causes storage to be allocated:
+double up; // definition, up is 0
+extern int blem; // blem defined elsewhere
+extern char gr = 'z'; // definition because initialized
+If you use an external variable in several files, only one file can contain a definition for
+that variable (per the one definition rule). But every other file using the variable needs to
+declare that variable using the keyword extern:
+
+
+void B::test_friend(const int i) { APtr->x=i;  //accessing the private data member }
+
+friend is not transitive
+
+
+However, a pointer of type A * is a private data member of
+class B. So, the compiler should also know that there is a
+class A before it compiles the de¿ nition of class B. This
+ problem of circular dependence is solved by forward
+ declaration. This is done by inserting the line class A;
+  //Declaration only! Not definition!! before the definition
+   of class B
+
+
+Friends as bridges Friend functions can be used as bridges between two classes. Suppose there are two unrelated classes
+ whose private data members
+
+
+ Explicitly de¿ ning a static data member outside the class is necessary. Otherwise, the linker produces an error. The following statement allocates memory for interest_rate member of class Account.
+ float Account::interest_rate; The above statement initializes interest_rate to zero. If some other initial value (say 4.5) is desired instead, the statement should be rewritten as follows.
+ float Account::interest_rate=4.5; Static data members should be de¿ ned in the implementation ¿ les only
+
+
+Now, the Account::set_interest_rate() function can be called directly without an object. Account::set_interest_rate(5);
+
+a1.set_interest_rate(5); //a1 is an object of the class      //Account
+
+
+expected type-specifier before ‘StaticFloor’
+                       componsants[i][j]= new StaticFloor(Positiont(i,j));
+
+
+-> include probleme
+Monstre::getPosition’ does not have class type => parenthese oubliée

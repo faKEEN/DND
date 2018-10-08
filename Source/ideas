@@ -1,0 +1,34 @@
+le joueur s'enregistrent dans les salles das qu'il y rentre
+qd il en ressort il est capable de voir les contenus de ces salles
+
+les monstres de chaque salle s'enregistre à la positio du joueur notifié par la salle => et l' atttaque et le suive selon leur caract
+
+
+
+la class mediator tient le modele et un tableau de niveau:
+  le mediator fait un random sur son array de niveau pour en decider l'ordre :
+
+-> affiche le niveau courant
+-> le joueur se deplace:*
+      -> notifie sa position aux salles ki notifie leurs MonstreResistant
+      -> si le joueur en sort
+      -> update pour dire ke le monstre n'est plus dans leur salle
+      -> un monstre peut mtn suivre le joueur dans un couloir sil est mince juka dans une autre setIsFullBarLife
+      -> cette sale ajoute cem onstre dans son array et le retire si le monstre en sort
+      -> un monstre peut se teleporter dans une autre salle -> cette salle ajoute ce monste dans son array
+le niveau maintient les observers
+- le joueur observable
+-les observateus monstres :
+  le niveau appel acccept sur chaque salle et appelle accept(character s);
+ le joeur vist une salle
+ la salle fait un notify sur chaque monstre
+  for monstre in array monstre:
+    notify (Character c);
+
+ charracer .visit(Salle s){}
+ character -> addsallevue(s);
+
+ -> chaque monstre notify(character c){
+      this.attack(c);
+      s
+ }
